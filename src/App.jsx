@@ -1,5 +1,5 @@
 import './App.css'
-import {Account} from './Account';
+import Account from './Account';
 import { Container } from 'react-bootstrap';
 function App() {
 
