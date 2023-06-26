@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Form} from 'react-bootstrap'
+import {Form, Button} from 'react-bootstrap'
 import axios from 'axios'
 function Register(){
 
@@ -13,7 +13,7 @@ function Register(){
 
         const configuration = {
             method:"post",
-            url:"http://loacalhost:8080/register",
+            url:"http://localhost:8080/register",
             data:{
                 email,
                 password
@@ -31,8 +31,7 @@ function Register(){
             }
         )
     }
-    return 
-    (
+    return (
         <div>
             <h2>Register</h2>
             <Form onSubmit={(e) => handleSubmit(e)}>
@@ -52,7 +51,7 @@ function Register(){
                     <Form.Control value={password} type='password' name='password' placeholder='Enter Password' onChange={ (e)=> setPassword(e.target.value)}/>
                 </Form.Group>
 
-                <Button variant='primary'>Register</Button>
+                <Button variant='primary' type='submit'>Register</Button>
                 {/* Display success or error message */}
 
                 {
@@ -62,10 +61,8 @@ function Register(){
                             <p className='text-failed'>You aren't registered</p>
                         )
                 }
-                    
-                
             </Form>
         </div>
-    )
+    );
 }
 export default Register;
