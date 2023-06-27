@@ -1,7 +1,7 @@
 import './App.css'
 import Account from './Account';
-import { Container, Row } from 'react-bootstrap';
-import {Routes, Route} from 'react-router-dom';
+import { Container, Row , Col } from 'react-bootstrap';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import FreeComponent from './FreeComponent';
 import AuthComponent from './AuthComponent';
 import ProtectedRoutes from './ProtectedRoutes';
@@ -9,6 +9,7 @@ import ProtectedRoutes from './ProtectedRoutes';
 function App() {
 
   return (
+    <Router>
     <Container>
       {/* <Account/> */}
       <Row>
@@ -44,6 +45,7 @@ function App() {
 
       </Routes>
     </Container>
+  </Router>
   )
 }
 
