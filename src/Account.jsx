@@ -1,13 +1,20 @@
-import './App.css'
-import Account from './Account';
-import { Container } from 'react-bootstrap';
-function App() {
-
-  return (
-    <Container>
-      <Account/>
-    </Container>
-  )
-}
-
-export default App
+import React from "react";
+import Register from './Register';
+import Login from './Login';
+import {Row, Col} from 'react-bootstrap';
+function Account(){
+  return(
+      <Row>
+          {/* Register */}
+          <Col xs={12} sm={12} lg={6}>
+            <Register />
+          </Col>
+            {/* Login */}
+            <Col xs={12} sm={12} lg={6}>
+                <Login />
+            </Col>
+        </Row>
+        );
+      }
+      
+export default Account;
