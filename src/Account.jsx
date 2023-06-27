@@ -2,6 +2,7 @@ import React from "react";
 import Register from './Register';
 import Login from './Login';
 import {Row, Col} from 'react-bootstrap';
+
 function Account(){
   return(
       <Row>
